@@ -1,0 +1,320 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: #424547;
+  font-family: 'Open Sans', 'Arial',sans-serif !important;
+  padding-top: 64px;
+  background: #e2e2e2;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  background: #F8F8F9;
+  box-shadow: 0px -5px 10px rgba(0,0,0,0.2);
+  padding-bottom: 100px;
+  min-height: 90vh;
+}
+
+a {
+  color: #3DBFB7;
+  text-decoration: none;
+}
+
+h4 {
+  margin: 0;
+  display: inline;
+}
+
+/* Home */
+.info-wrapper {
+  padding-top: 50px;
+}
+
+.info {
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F1F1F1;
+  max-width: 600px;
+}
+
+.credentials {
+  border-radius: 10px;
+  background: #fff;
+  padding: 50px;
+}
+
+.spline {
+  position: absolute;
+  bottom: 66px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  align-content: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 0 64px;
+  height: 64px;
+  background: #fff;
+  border-bottom: solid 1px #DBDFE3;
+  overflow: visible !important;
+  max-width: 1200px;
+  box-shadow: 0px -5px 10px rgba(0,0,0,0.2);
+}
+
+.logo.w3-bar-item {
+  height: 23.5px;
+  width: auto;
+  margin: 0 64px 0 0;
+  padding: 0;
+}
+
+.w3-bar a.w3-bar-item {
+  color: #6D7A87;
+  font-size: 14px;
+  margin-right: 16px;
+  padding: 0;
+  text-decoration: none;
+}
+
+a.w3-bar-item:last-child {
+  margin-right: 0;
+}
+
+a.w3-bar-item:hover {
+  background: none!important;
+  border-bottom: 1px solid #5233BD;
+}
+
+a.w3-bar-item.active {
+  color: #5233BD;
+}
+
+a.w3-bar-item.active:hover {
+  color: #5233BD !important;
+}
+
+.w3-dropdown-content {
+  top: 50px;
+  min-width: 0;
+  padding: 10px;
+}
+
+/* Welcome bar */
+.welcome {
+  border-bottom: solid 2px #DBDFE3;
+  padding: 32px 64px 16px 0;
+  margin: 0 64px 32px;
+	position: relative;
+}
+
+.remove {
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+.welcome #message {
+  font-size: 14px !important;
+}
+
+.welcome #message a:hover {
+  border-bottom: 1px solid #3DBFB7;
+}
+
+.icon-wrapper {
+  margin-left: auto;
+}
+
+.icon {
+  padding-right: 0 !important;
+  display: inline;
+  position: relative;
+}
+
+.icon img {
+  padding-left: 4px !important;
+}
+
+.badge {
+  background-color: #3DBFB7;
+  border-radius: 50%;
+  color: white;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  right: 7px;
+  text-align: center;
+}
+
+.avatar-wrapper {
+  padding-right: 0 !important;
+  padding-left: 4px !important
+}
+
+.avatar {
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  padding: 0 !important;
+}
+
+.carrot {
+  margin-top: 4px;
+}
+
+/* Auth modal */
+.auth-modal {
+  width: 280px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+/* Reflect View */
+.reflect-view-wrapper {
+  padding: 0 64px;
+}
+
+.reflect-view-wrapper.with-top-padding {
+  padding-top: 32px;
+}
+
+#reflect-view {
+  position: relative;
+}
+
+.viz-title {
+  font-size: 18px !important;
+}
+
+/* Change Reflect error message to be more descriptive */
+.viz-view-message {
+  display: none;
+}
+
+.viz-view-message-container {
+  height: 200px;
+}
+
+.viz-view-message-container:after {
+  content: 'This report is only available to users authenticated using Reflect\'s multitenancy feature. To create your own secure report, ensure that your Reflect project keys are saved to your .env file, and that the user parameter built in your route is identical to that in your view.';
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #F1F1F1;
+  max-width: 600px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 66px;
+  line-height: 66px;
+  background-color: rgba(50, 50, 50,0.95);
+  box-shadow: .5rem .3rem 2rem rgba(0,0,0,0.17);
+  text-align: center;
+  color: #201F1E;
+  font-size: 14px;
+  z-index: 1;
+}
+
+footer .reflect-logo {
+  position: absolute;
+  left: 30px;
+}
+
+footer span {
+  color: #f2f2f2;
+}
+
+footer span a {
+  color: #269CFF !important;
+  font-weight: 600;
+}
+
+footer .reflect-logo img {
+  height: 30px;
+  margin-bottom: -12px;
+}
+
+footer .github-link {
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  color: #f2f2f2;
+  background: #269CFF;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 700px) {
+  .content-wrapper {
+    padding-bottom: 60px;
+    padding-top: 30px;
+  }
+
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  .credentials {
+    padding: 16px;
+  }
+
+  nav, .reflect-view-wrapper {
+    padding: 32px;
+  }
+
+  .welcome, .info {
+    margin: 0 16px;
+  }
+
+  .welcome #message {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    height: 100px;
+  }
+
+  .linebreak {
+    display: block;
+    width: 100%;
+    height: 16px;
+  }
+
+  /*hide these elements*/
+  .reflect-charts-legend, .rc-datepicker-wrapper {
+    width: 0 !important;
+    padding: 0 !important;
+    display: none;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 701px) {
+  .linebreak {
+    display: none;
+  }
+}

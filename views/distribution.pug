@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .w3-container.reflect-view-wrapper.with-top-padding
+    //- this is where the Reflect view is rendered
+    #reflect-view
+
+  script.
+      //- call to render a secure view
+      function render(ui) {
+        ui.view(document.getElementById('reflect-view'), 'QDgzfGCjQZe20G8zjRdplg');
+      }
+
+      $(function() {                
+        //- create the Reflect instance with the project access token and signed token
+        var ui = new ReflectUI([
+          `#{reflectUserAuth.reflectAccessKey}`,
+          `#{reflectUserAuth.reflectSignedToken}`
+        ]);
+                
+        //- define parameters with user attributes to match backend request
+        var userParam = {
+           field: 'Customer Name',
+           op: '=',
+           value: 'Logan Haushalter'
+         }
+         //-  or value: `#{user.nickname}`
+
+      
+        //- apply parameters
+        ui.withParameters([
+          userParam
+        ]);
+      
+        //- render secure view
+        render(ui);
+      });

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .welcome
+    p#message Welcome back, #{user.nickname}. You have 
+      a() 2 inquiries 
+      span pending and several 
+      a(href="/distribution") distribution updates
+      span .
+    img.remove(src="img/remove.svg")
+      
+  .w3-container.reflect-view-wrapper
+    //- this is where the Reflect view is rendered
+    #reflect-view
+
+  script.
+    //- instantiate new instance
+    var ui = new ReflectUI();
+
+    //- call to render your unparameterized view
+    function render() {
+      ui.view(document.getElementById('reflect-view'), 'a5yAVqaPQV-tEyqm8eQ5Bw');
+    }
+
+    $(function() {
+      //- render the unparameterized view
+      render();
+    });

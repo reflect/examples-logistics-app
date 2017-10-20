@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .info-wrapper
+    .info
+      span This sample reporting application is powered by 
+      a(href="https://reflect.io/")
+        strong Reflect 
+      span and 
+      a(href="https://auth0.com/")
+        strong Auth0
+      span . If you enjoy this demo, fork it on 
+      a(href="https://github.com/reflect/examples-logistics-app/tree/master") GitHub 
+      span for your own use.
+      br
+      br
+      .credentials
+        span Use these credentials to 
+        a(href="/login") log in 
+        span as a sample user:
+        p Email: 
+          strong reflect.user@gmail.com
+        p Password: 
+          strong password
+  img.spline.hidden-mobile(src="img/spline.png")

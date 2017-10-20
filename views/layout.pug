@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    link(rel='shortcut icon' type='image/x-icon' href='/favicon.ico')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='/stylesheets/reflect-theme.css')
+    //- If you remove the custom Reflect theme above, uncomment the cdn below to pull down the default styles for your report
+    //- link(rel='stylesheet', href='https://cdn.reflect.io/0.10.35/reflect.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    script(src="https://cdn.auth0.com/js/lock/10.18.0/lock.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://cdn.reflect.io/latest/reflect.js")
+
+  body
+    .content-wrapper
+      nav.w3-bar(role="navigation")
+        img.logo.w3-bar-item(src="/img/office-stock-logo.svg")
+        if loggedIn
+          .linebreak
+          a(href="/supply").w3-bar-item.w3-button.supply-btn Supply
+          a(href="/distribution").w3-bar-item.w3-button.distribution-btn Distribution
+          .icon-wrapper.hidden-mobile.w3-bar-item.w3-right
+            .icon
+              img.w3-bar-item(src="img/cart.svg")
+              span.badge 4
+            .icon
+              img.w3-bar-item(src="img/world.svg")
+              span.badge 9
+            .icon
+              img.w3-bar-item(src="img/chat.svg")
+              span.badge 2
+          .avatar-wrapper.hidden-mobile.w3-dropdown-hover.w3-bar-item.w3-right
+            //- To use dynamic user avatar from Auth0
+            //- img.avatar.icon.w3-bar-item(src=user.picture)
+            img.avatar.icon.w3-bar-item(src="img/avatar.jpg")
+            img.carrot.icon.w3-bar-item.w3-right(src="img/small-down.svg")
+            .w3-dropdown-content.w3-bar-block.w3-border
+              a(href="/logout").w3-bar-item.w3-button Logout          
+        else
+          a( href="/login" ).w3-bar-item.w3-button Login
+      block content
+    footer.navbar-fixed-bottom
+      a(target="_blank" class="hidden-mobile reflect-logo" href="https://reflect.github.io/examples/")
+        img(src="img/reflect-logo.svg" alt="reflect logo")
+      span Productize your data with Reflect. 
+        a(target="_blank" href="https://reflect.io") Learn how today.
+      a(target="_blank" class="hidden-mobile github-link" href="https://github.com/reflect/examples-logistics-app/tree/master") View on GitHub
+
+    script.
+      if (window.location.href.indexOf("supply") > -1) {
+        $('.supply-btn').addClass( "active" );
+      } else if (window.location.href.indexOf("distribution") > -1) {
+        $('.distribution-btn').addClass( "active" );
+      }
